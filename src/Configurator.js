@@ -10,10 +10,10 @@ class Configurator extends Component {
             frameName: "no",
             viewInRoom: false          
         };
-    this.handleOptionSize = this.handleOptionSize.bind(this);
-    this.handleOptionFrame = this.handleOptionFrame.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.submit = this.submit.bind(this);
+        this.handleOptionSize = this.handleOptionSize.bind(this);
+        this.handleOptionFrame = this.handleOptionFrame.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.submit = this.submit.bind(this);
     }
 
     handleOptionSize(e) {
@@ -38,8 +38,8 @@ class Configurator extends Component {
                             onChange = {onChange} 
                             width = {item.width} 
                             height = {item.height}
-                            nameColor= {item.color}
-                            colorFrame={item.image} 
+                            nameColor = {item.color}
+                            colorFrame = {item.image} 
                         />;                
             })
 
@@ -48,16 +48,16 @@ class Configurator extends Component {
     render() {
         
         let selectedSize = {
-            price: 0
-        };
+                price: 0
+            };
         this.props.sizes.forEach(function(item, i, size) {
             if(size[i].name === this.state.sizeName){
                 selectedSize = item;
             }          
         } ,this);
         let selectedFrame = {
-            price: 0
-        };
+                price: 0
+            };
         this.props.frames.forEach(function(item, i, frame) {
             if(frame[i].name === this.state.frameName){
                 selectedFrame = item;
@@ -69,7 +69,7 @@ class Configurator extends Component {
         const valueSizes = this.getRenderItems(this.props.sizes, "size", this.handleOptionSize);
         const valueFrames = this.getRenderItems(this.props.frames, "frame", this.handleOptionFrame);
         const borderStyle = {
-            height:"400px",
+            height: "400px",
             border: "30px solid #fff",
             padding: "10px",
             borderImage: selectedFrame.image ? "url(" + selectedFrame.image + ") 10 round round": "30px solid #fff"
@@ -81,15 +81,15 @@ class Configurator extends Component {
                     {this.state.viewInRoom ? 
                         <InRoom widthFrame = {selectedSize.width}
                                 heightFrame = {selectedSize.height} 
-                                roomimage={this.props.image} 
-                                frame ={selectedFrame.image}
+                                roomimage = {this.props.image} 
+                                frame = {selectedFrame.image}
                         />:<img style = {borderStyle} src = {this.props.image} alt="img"/>}
                     <div className = "button__position">
                         <button value={this.state.viewInRoom} onClick={this.handleClick} > {this.state.viewInRoom ? "view print":"view in room"}</button>    
                     </div>
                 </div>             
                 <div className = "menu__selecter">
-                    <form onSubmit={this.submit}>
+                    <form onSubmit = {this.submit}>
                         <h1>Size frames: {selectedSize.width ? selectedSize.width +" X "+ selectedSize.height : false}</h1>
                         <div className="size">{valueSizes}</div>
                             <h1>Color frames: {selectedFrame.name}</h1>
