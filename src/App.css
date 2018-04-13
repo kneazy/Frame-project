@@ -1,0 +1,49 @@
+.content{
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	width: 100%;
+	max-width: 1280px; 
+	padding-top: 20px;
+}
+h1 {
+	display: flex;
+	justify-content: center;
+	margin: 30px;
+}
+
+.size {
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	width: 500px;
+	height: 50px;
+}
+.sizesFrames {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+.image-bootton__grup{
+	display: flex;
+	flex-direction: column;
+}
+.in-Room{
+	margin: 20px;
+}
+form{
+	display: flex;
+	flex-direction: column;
+}
+form button{
+	margin-top: 20px;
+}
+.button__position{
+	position: absolute;
+	top: 650px;	
+	left: 400px;
+	right: 0px;	
+}
+.menu__selecter{
+	margin-left: 20px;
+}

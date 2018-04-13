@@ -1,0 +1,42 @@
+{
+  "image": "Image URL",
+  "sizes": [
+    {
+      "width": 11.5,
+      "height": 17,
+      "price": 249.00
+    },
+    {
+      "width": 24,
+      "height": 36,
+      "price": 999.00
+    },
+    {
+      "width": 36,
+      "height": 54,
+      "price": 2499.00  
+    }
+  ],
+  "frames": [
+    {
+      "name": "no",
+      "image": "Image URL",
+      "price": 0.00
+    },
+    {
+      "name": "black",
+      "image": "Image URL",
+      "price": 260.00
+    },
+    {
+      "name": "white",
+      "image": "Image URL",
+      "price": 260.00
+    },
+    {
+      "name": "golden",
+      "image": "Image URL",
+      "price": 295.00
+    }
+  ]
+}
